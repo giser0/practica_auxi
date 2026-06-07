@@ -1,93 +1,69 @@
-# PRACTICA-BACKEND-auxi
+# PRACTICA-BACKEND
 
-Proyecto backend desarrollado con NestJS.
+Backend desarrollado con **NestJS** para la gestión de una tienda online.
+Incluye configuración con PostgreSQL, TypeORM y documentación vía Scalar.
 
-## Requisitos
+## 👤 Autor
 
-Antes de iniciar el proyecto debes tener instalado:
+**Sergio Wilder Huaylliri Nina**
 
-- Node.js
+---
+
+## 📋 Requisitos
+
+Antes de iniciar el proyecto asegúrate de tener instalado:
+
+- Node.js (v18 o superior recomendado)
 - npm
 - PostgreSQL
 - Nest CLI (opcional)
+- Docker (opcional)
 
-## Instalación
+---
 
-Clonar el repositorio:
+## 📦 Instalación
 
-```bash
-git clone https://github.com/Kathy-Ramirez/PRACTICA-BACKEND-auxi.git
-```
-
-Entrar a la carpeta:
+Clona el repositorio:
 
 ```bash
-cd PRACTICA-BACKEND-auxi
-```
+git clone https://github.com/tu-usuario/tu-repositorio.git
 
-Instalar dependencias:
+Ingresa a la carpeta del proyecto:
 
-```bash
+cd PRACTICA-BACKEND
+
+Instala las dependencias:
+
 npm install
-```
+Configuración de la Base de Datos
 
-## Configuración de la base de datos
+Crea la base de datos en PostgreSQL:
 
-crea una base de datos en postgreSql:
-
-```bash
 CREATE DATABASE tienda_online;
-```
+Configuración de conexión a PostgreSQL
 
-## Configuración de conexión PostgreSQL
+La configuración se encuentra en el archivo:
 
-La configuración de conexión le encuentras en:
-
-```bash
 src/app.module.ts
-```
-modifica segun tu usuario y possword
 
-```bash
+Modifica los valores según tu entorno:
+
 TypeOrmModule.forRoot({
   type: 'postgres',
   host: 'localhost',
-  port: 5432, // u otro segun tus configuariones
-  username: 'postgres', //usuarrio de gestor
-  password: '123456', //tu contraseña
-  database: 'tienda_online', //nombre de la bd
+  port: 5432, // cambia si tu configuración es diferente
+  username: 'postgres', // usuario de PostgreSQL
+  password: '123456', // contraseña de PostgreSQL
+  database: 'tienda_online',
   autoLoadEntities: true,
   synchronize: true,
 })
-```
-
-## Ejecutar el proyecto
-
-Modo desarrollo:
-
-```bash
+Ejecución del Proyecto
+Modo desarrollo
 npm run start:dev
-```
 
-Modo producción:
+Documentación de la API (Scalar)
 
-```bash
-npm run start:prod
-```
+Para visualizar la documentación del proyecto, abre en tu navegador:
 
-## Ejecucion del proyecto(scalar)
-
-Para hacer correr el proyecto scalar, ejecutar el siguiente codigo en cualquier navegador:
-
-```bash
 http://localhost:3000/scalar
-```
-
-
-## Tecnologías usadas
-
-- NestJS
-- TypeScript
-- PostgreSQL
-- TypeORM
-- Docker
